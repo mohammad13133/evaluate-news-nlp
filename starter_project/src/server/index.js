@@ -14,11 +14,9 @@ app.use(bodyParser.json());
 console.log(__dirname);
 
 // Variables for url and api key
-const dotenv = require("dotenv");
-dotenv.config();
-
+console.log(`Your API key is ${process.env.API_KEY}`);
 app.get("/", function (req, res) {
-  res.sendFile("dist/index.html");
+  res.sendFile("dist/index.js");
 });
 
 // POST Route
